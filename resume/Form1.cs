@@ -15,6 +15,10 @@ namespace resume
         public Form1()
         {
             InitializeComponent();
+            grpHeader.Paint += PaintBorderlessGrpHeader;
+            grpHeader.MouseDown += GrpHeaderOnMouseDown;
+            btnHeaderExit.Paint += PaintBorderlessBtnHeaderExit;
+            btnHeaderExit.Click += BtnHeaderExit_Click;
         }
     }
 }
