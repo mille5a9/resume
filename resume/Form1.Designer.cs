@@ -26,7 +26,7 @@ namespace resume
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
         }
-#endregion
+        #endregion
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -56,6 +56,18 @@ namespace resume
             p.Graphics.DrawString(btn.Text, btn.Font, new SolidBrush(Color.FromArgb(195, 12, 42)), 0, 0);
         }
         private void BtnHeaderExit_Click(object sender, EventArgs e) { Close(); }
+        private void BtnHeaderExit_MouseHover(object sender, EventArgs e)
+        {
+            Button triggered = (Button)sender;
+            triggered.UseVisualStyleBackColor = false;
+            triggered.BackColor = Color.DarkGray;
+        }
+        private void BtnHeaderExit_MouseLeave(object sender, EventArgs e)
+        {
+            Button triggered = (Button)sender;
+            triggered.UseVisualStyleBackColor = true;
+            triggered.BackColor = Color.Black;
+        }
 
         #region Windows Form Designer generated code
 

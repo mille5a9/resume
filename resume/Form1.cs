@@ -19,6 +19,8 @@ namespace resume
             grpHeader.MouseDown += GrpHeaderOnMouseDown;
             btnHeaderExit.Paint += PaintBorderlessBtnHeaderExit;
             btnHeaderExit.Click += BtnHeaderExit_Click;
+            btnHeaderExit.MouseHover += BtnHeaderExit_MouseHover;
+            btnHeaderExit.MouseLeave += BtnHeaderExit_MouseLeave;
         }
     }
 }
