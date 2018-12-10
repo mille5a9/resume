@@ -6,6 +6,7 @@ body {
 
 .my-nav-menu {
     position: fixed;
+    display: inline-block;
     top: 0;
     left: 0;
     z-index: 999;
@@ -22,9 +23,11 @@ body {
 }
 
 .my-nav-btn {
+    position: relative;
     font-size: 26px;
     background-color: #e00122;
     color: #111111;
+    white-space: nowrap;
 }
 
 .my-nav-btn:hover {
@@ -42,7 +45,43 @@ body {
     text-decoration: none;
 }
 
+.col-sm-1, .col-sm-2 {
+    margin-right: 70px;
+}
+
+.page-text {
+    animation: 1s ease-out bodyslide;
+}
+
+@media (max-width: 767px) {
+    .my-nav-menu {
+        position: fixed;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 200px;
+        background-color: #e00122;
+    }
+    body {
+        padding-top: 210px;
+        background-color: #111111;
+        color: #eeeeee;
+    }
+}
+
+@keyframes bodyslide {
+    0% {
+        transform: translate(0, 500%)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
 @keyframes nameslide {
-    0% { transform: translate(100%, 0) }
+    0% { transform: translate(1000px, 0) }
     100% { transform: translate(0, 0) }
 }

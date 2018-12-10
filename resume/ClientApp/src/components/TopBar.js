@@ -3,18 +3,6 @@ import { Link } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
 
 export class TopBar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            links: []
-        }
-    }
-
-    componentDidMount() {
-        this.setState({
-            links: ["Experience", "Education", "Expertise", "Evidence"]
-        });
-    }
 
     render() {
         return (
