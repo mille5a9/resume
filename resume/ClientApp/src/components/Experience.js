@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import ImageLoader from 'react-load-image';
 
 export class Experience extends Component {
     constructor(props) {
@@ -12,18 +13,19 @@ export class Experience extends Component {
     componentDidMount() {
         var rowstoset = [];
         rowstoset.push({
-            companyName: "Fortech LLC - 8854 Brookside Ave, West Chester, OH 45069",
+            companyName: "Fortech LLC - Co-op Web Developer",
             iconFilename: "FT.JPG",
             dateText: "August 2018 - Present",
-            positionLine: "Co-op Web Developer",
-            innerText: ["responsibility 1", "responsibility 2", "responsibility 3"]
+            innerText: ["Developed Web Applications in ASP.NET CORE with MVC and React",
+                "Learned and applied Knockout.js, Angular.js, React.js frameworks",
+                "Developed C# backend controllers to interact with SQL Databases"]
         });
         rowstoset.push({
-            companyName: "University of Cincinnati - 2600 Clifton Ave, Cincinnati, OH 45220",
+            companyName: "University of Cincinnati - Co-op Undergraduate Researcher",
             iconFilename: "UC.jpeg",
             dateText: "January 2018 - May 2018",
-            positionLine: "Co-op Undergraduate Researcher",
-            innerText: ["responsibility 1", "responsibility 2", "responsibility 3"]
+            innerText: ["Contributed to Dr. Phillip Wilsey's High-Performance Computing Lab",
+                "Designed discrete event simulation to model networks of neurons (C++)"]
         });
 
         this.setState({
@@ -40,8 +42,8 @@ export class Experience extends Component {
                 <Col sm={8}>
                     <div className="my-exp-module" key={i}>
                         <h1>{job.companyName}</h1>
-                        <img src={"images/" + job.iconFilename} className="my-content-icons"></img>
-                        <div className="my-content-text">{job.positionLine} - {job.dateText}
+                        <ImageLoader src={"images/" + job.iconFilename}><img className="my-content-icons" /></ImageLoader>
+                        <div className="my-content-text">{job.dateText}
                             <ul>
                                 {job.innerText.map((bullet, i) =>
                                     <li key={i}>

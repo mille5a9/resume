@@ -14,7 +14,7 @@ export class Home extends Component {
                 <p><br/>I am currently working on my B.S. in Computer Engineering at the University of Cincinnati. For Engineering degrees at Cincinnati, we need to complete several terms of full time internships in between academic semesters. I've completed two such terms, one with the University and one with Fortech LLC in Cincinnati.</p>
                 <p>My hopes are to continue to pursue a career in the heart of technological developments. I am very interested in building upon my skills as a developer and software engineer.</p>
                 <p>More information about myself, my accomplishments, and my qualifications is available using the links above, and you can reach me here:</p>
-                <p className="page-text-contact"><br/>Andrew Miller<br/>2126 Mayflower Circle<br/>Grove City, Ohio 43123<br/>614-827-5168<br/>andrew.mille5a9@outlook.com</p>
+                <p className="page-text-contact"><br/>Andrew Miller<br/>614-827-5168<br/>andrew.mille5a9@outlook.com</p>
             </Col>
             <Col sm={2}></Col>
         </div>
