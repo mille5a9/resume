@@ -2,7 +2,7 @@
 import { Col, Row } from 'react-bootstrap';
 import ImageLoader from 'react-load-image';
 
-export class Expertise extends Component {
+export class Skills extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,15 +23,9 @@ export class Expertise extends Component {
             bullets: ["Recurring scholarship from UC", "Requires maintaining a 3.2 GPA, and fulfilling community service"]
         });
         rowstoset.push({
-            moduleHeader: "Awards",
+            moduleHeader: "Awards and Certifications",
             iconFilename: "eagle.png",
             bullets: ["Eagle Scout Rank", "Passed Microsoft Exam 483: Programming in C#"]
-        });
-        rowstoset.push({
-            moduleHeader: "Ethereum Miner",
-            iconFilename: "ETH.png",
-            bullets: ["Built Linux Machine on specialized distribution \"ethOS\"",
-                "Runs five high-end GPUs for mining on the Ethereum Blockchain"]
         });
 
         this.setState({

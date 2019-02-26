@@ -4,8 +4,8 @@ import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { Experience } from './components/Experience';
 import { Education } from './components/Education';
-import { Expertise } from './components/Expertise';
-import { Evidence } from './components/Evidence';
+import { Skills } from './components/Skills';
+import { Projects } from './components/Projects';
 
 export default class App extends Component {
   displayName = App.name
@@ -16,8 +16,8 @@ export default class App extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/experience' component={Experience} />
         <Route path='/education' component={Education} />
-        <Route path='/expertise' component={Expertise} />
-        <Route path='/evidence' component={Evidence} />
+        <Route path='/skills' component={Skills} />
+        <Route path='/projects' component={Projects} />
       </Layout>
     );
   }

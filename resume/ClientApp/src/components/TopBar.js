@@ -11,8 +11,9 @@ export class TopBar extends Component {
                     <Col sm={2}><Link className="my-nav-btn" to="/">Andrew Miller</Link></Col>
                     <Col sm={2}><Link className="my-nav-btn" to="/experience">Experience</Link></Col>
                     <Col sm={2}><Link className="my-nav-btn" to="/education">Education</Link></Col>
-                    <Col sm={2}><Link className="my-nav-btn" to="/expertise">Expertise</Link></Col>
-                    <Col sm={2}><Link className="my-nav-btn" to="/evidence">Evidence</Link></Col>
+                    <Col sm={2}><Link className="my-nav-btn" to="/skills">Skills and Awards</Link></Col>
+                    <Col sm={2}><Link className="my-nav-btn" to="/projects">Projects</Link></Col>
+                    <Col sm={2}><a class="my-nav-btn" href="/Andrew_Miller.pdf" target="_blank">PDF Resume</a></Col>
                 </h1>
             </div>
         );

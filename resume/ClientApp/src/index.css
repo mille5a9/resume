@@ -4,6 +4,31 @@ body {
     color: #eeeeee;
 }
 
+.my-projects-link:hover {
+    color: white;
+    font-size: 26px;
+}
+
+.my-projects-link:visited {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.my-projects-link:active {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.my-projects-link {
+    color: white;
+}
+
+a {
+    color: #111111;
+}
+
 .my-nav-menu {
     position: fixed;
     display: inline-block;
@@ -32,6 +57,7 @@ body {
     text-decoration: none;
 }
 
+
 .my-nav-btn {
     position: relative;
     font-size: 26px;
@@ -39,7 +65,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     white-space: nowrap;
     width: 80%;
     margin: auto;
@@ -50,6 +76,7 @@ body {
     border-radius: 10px;
     color: #111111;
     font-size: 28px;
+    text-decoration: none;
 }
 
 .my-nav-btn:visited {
@@ -96,6 +123,7 @@ body {
 
 .my-exp-module > h1 {
     font-size: 2vw;
+    color: white;
 }
 
 .my-content-icons {
@@ -190,13 +218,16 @@ body {
         left: 0;
         z-index: 999;
         width: 100%;
-        height: 227px;
+        height: 270px;
         background-color: #e00122;
     }
     body {
-        padding-top: 210px;
+        padding-top: 260px;
         background-color: #111111;
         color: #eeeeee;
+    }
+    a:hover {
+        text-decoration: none;
     }
     .my-content-icons {
         display: none;
@@ -211,9 +242,29 @@ body {
     .my-content-text > ul {
         font-size: 3vw;
     }
+    .my-projects-link:hover {
+        color: white;
+        font-size: 26px;
+    }
+
+    .my-projects-link:visited {
+        color: white;
+        font-size: 26px;
+        text-decoration: none;
+    }
+
+    .my-projects-link:active {
+        color: white;
+        font-size: 26px;
+        text-decoration: none;
+    }
+
+    .my-projects-link {
+        color: white;
+    }
 }
 
-@keyframes bodyslide {
+/*@keyframes bodyslide {
     0% {
         transform: translate(0, 500%);
     }
@@ -221,9 +272,9 @@ body {
     100% {
         transform: translate(0, 0);
     }
-}
+}*/
 
-@keyframes iconcontentslide {
+/*@keyframes iconcontentslide {
     0% {
         transform: translate(2000px, 0);
         opacity: 0;
@@ -237,9 +288,9 @@ body {
     100% {
         transform: translate(0, 0)
     }
-}
+}*/
 
-@keyframes iconcontentslideleft {
+/*@keyframes iconcontentslideleft {
     0% {
         transform: translate(-2000px, 0);
         opacity: 0;
@@ -253,9 +304,9 @@ body {
     100% {
         transform: translate(0, 0)
     }
-}
+}*/
 
-@keyframes iconcontentslideright {
+/*@keyframes iconcontentslideright {
     0% {
         transform: translate(2000px, 0);
         opacity: 0;
@@ -269,10 +320,10 @@ body {
     100% {
         transform: translate(0, 0)
     }
-}
+}*/
 
 
-@keyframes textcontentslide {
+/*@keyframes textcontentslide {
     0% {
         transform: translate(-2000px, 0);
         opacity: 0;
@@ -287,9 +338,9 @@ body {
         transform: translate(0, 0);
         opacity: 1;
     }
-}
+}*/
 
-@keyframes nameslide {
+/*@keyframes nameslide {
     0% { transform: translate(1000px, 0) }
     100% { transform: translate(0, 0) }
-}
+}*/
