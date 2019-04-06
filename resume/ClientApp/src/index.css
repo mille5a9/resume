@@ -23,6 +23,7 @@ body {
 
 .my-projects-link {
     color: white;
+    text-decoration: none;
 }
 
 a {
@@ -108,7 +109,7 @@ a {
 }
 
 .my-exp-page > .row {
-    height: 350px;
+    height: 300px;
     margin-top: 50px;
     animation: 1s ease-out bodyslide;
 }
@@ -116,19 +117,45 @@ a {
 .my-exp-module {
     border: 2px solid #e00122;
     border-radius: 10px;
-    height: 350px;
+    height: 300px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .my-exp-module > h1 {
-    font-size: 2vw;
+    font-size: 30px;
+    color: white;
+}
+
+.my-projects-module {
+    border: 2px solid #e00122;
+    border-radius: 10px;
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.my-projects-module > h1 {
+    font-size: 30px;
+    color: white;
+}
+
+.my-skills-module {
+    border: 2px solid #e00122;
+    border-radius: 10px;
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.my-skills-module > h1 {
+    font-size: 30px;
     color: white;
 }
 
 .my-content-icons {
-    max-width: 10vw;
-    max-height: 10vw;
+    max-width: 50px;
+    max-height: 50px;
     position: absolute;
     margin: auto;
     margin-left: 50px;
@@ -140,19 +167,15 @@ a {
 }
 
 .my-content-text {
-    font-size: 1.6vw;
+    /*font-size: 3.5vmin;*/
+    font-size: 24px;
     margin: auto;
-    margin-top: 3.5%;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     padding-left: 20%;
     animation: 4s ease-in-out textcontentslide;
-}
-
-.my-content-text > ul {
-    font-size: 1.3vw;
 }
 
 .my-expert-module {
@@ -210,6 +233,25 @@ a {
     animation: 4s ease-in-out textcontentslide;
 }
 
+
+@media (max-width: 1000px) {
+    .my-exp-page > .row {
+        height: 400px;
+    }
+
+    .my-exp-module {
+        height: 400px;
+    }
+
+    .my-projects-module {
+        height: 400px;
+    }
+
+    .my-skills-module {
+        height: 400px;
+    }
+}
+
 @media (max-width: 767px) {
     .my-nav-menu {
         position: fixed;
@@ -221,27 +263,66 @@ a {
         height: 270px;
         background-color: #e00122;
     }
+
     body {
         padding-top: 260px;
         background-color: #111111;
         color: #eeeeee;
     }
+
     a:hover {
         text-decoration: none;
     }
+
     .my-content-icons {
         display: none;
     }
-    .my-exp-module > h1 {
-        font-size: 4vw;
+
+    .my-exp-page > .row {
+        height: 500px;
     }
+
+    .my-exp-module {
+        height: 500px;
+    }
+
+    .my-exp-module > h1 {
+        font-size: 36px;
+    }
+
+    .my-projects-row {
+        height: 300px !important;
+    }
+
+    .my-projects-module {
+        height: 300px;
+    }
+
+    .my-projects-module > h1 {
+        font-size: 36px;
+    }
+
+    .my-skills-module {
+        height: 250px;
+    }
+
+    .my-skills-row {
+        height: 250px !important;
+    }
+
+    .my-skills-module > h1 {
+        font-size: 36px;
+    }
+
     .my-content-text {
-        font-size: 3.5vw;
+        font-size: 24px;
         padding-left: 0;
     }
-    .my-content-text > ul {
-        font-size: 3vw;
-    }
+
+        .my-content-text > ul {
+            font-size: 24px;
+        }
+
     .my-projects-link:hover {
         color: white;
         font-size: 26px;
@@ -263,84 +344,3 @@ a {
         color: white;
     }
 }
-
-/*@keyframes bodyslide {
-    0% {
-        transform: translate(0, 500%);
-    }
-
-    100% {
-        transform: translate(0, 0);
-    }
-}*/
-
-/*@keyframes iconcontentslide {
-    0% {
-        transform: translate(2000px, 0);
-        opacity: 0;
-    }
-
-    50% {
-        transform: translate(2000px, 0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(0, 0)
-    }
-}*/
-
-/*@keyframes iconcontentslideleft {
-    0% {
-        transform: translate(-2000px, 0);
-        opacity: 0;
-    }
-
-    50% {
-        transform: translate(-2000px, 0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(0, 0)
-    }
-}*/
-
-/*@keyframes iconcontentslideright {
-    0% {
-        transform: translate(2000px, 0);
-        opacity: 0;
-    }
-
-    50% {
-        transform: translate(2000px, 0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(0, 0)
-    }
-}*/
-
-
-/*@keyframes textcontentslide {
-    0% {
-        transform: translate(-2000px, 0);
-        opacity: 0;
-    }
-
-    50% {
-        transform: translate(-1000px, 0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-}*/
-
-/*@keyframes nameslide {
-    0% { transform: translate(1000px, 0) }
-    100% { transform: translate(0, 0) }
-}*/

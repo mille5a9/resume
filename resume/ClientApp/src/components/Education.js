@@ -48,7 +48,7 @@ export class Education extends Component {
                 <Col sm={8}>
                     <div className="my-exp-module" key={i}>
                         <h1>{school.schoolName}</h1>
-                        <ImageLoader src={"images/" + school.iconFilename}><img className="my-content-icons" /></ImageLoader>
+                        <ImageLoader src={"images/" + school.iconFilename}><img className="my-content-icons" alt="{Icon}"/></ImageLoader>
                         <div className="my-content-text">{school.dateText}
                             <ul>
                                 {school.innerText.map((bullet, i) =>

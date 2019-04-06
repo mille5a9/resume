@@ -42,7 +42,7 @@ export class Experience extends Component {
                 <Col sm={8}>
                     <div className="my-exp-module" key={i}>
                         <h1>{job.companyName}</h1>
-                        <ImageLoader src={"images/" + job.iconFilename}><img className="my-content-icons" /></ImageLoader>
+                        <ImageLoader src={"images/" + job.iconFilename}><img className="my-content-icons" alt="{Icon}"/></ImageLoader>
                         <div className="my-content-text">{job.dateText}
                             <ul>
                                 {job.innerText.map((bullet, i) =>
