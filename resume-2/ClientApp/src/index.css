@@ -7,6 +7,7 @@ body {
     background-color: #333333;
     color: white;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 .carmine {
@@ -28,7 +29,8 @@ body {
 }
 
 .center {
-    text-align: center;
+    margin-left: 3% !important;
+    width: 5% !important;
 }
 
 .fullheight {
@@ -76,6 +78,20 @@ body {
     margin-top: 10%;
 }
 
+.menuliststart {
+    padding-top: 15%;
+}
+
+.menulist {
+    margin-top: 2%;
+}
+
+.menuselected {
+    font-size: 24px;
+    text-decoration-line: underline;
+    text-decoration-color: #960018;
+}
+
 @media (max-width: 767px) {
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
 
@@ -85,11 +101,41 @@ body {
     height: 100%;
 }
 
-@keyframes Sliding-Upward {
-    0%  { top: 150%; }
-    100% { top: 0%; }
+
+@keyframes Sliding-Upward-In {
+    100% { transform: translateY(0%) }
 }
 
-.upslide {
-    animation: Sliding-Upward 2s normal;
+@keyframes Sliding-Upward-Out {
+    100% { transform: translateY(-200%) }
+}
+
+@keyframes Sliding-Downward-In {
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes Sliding-Downward-Out {
+    100% {
+        transform: translateY(200%)
+    }
+}
+
+.upslidein {
+    transform: translateY(200%);
+    animation: Sliding-Upward-In 0.6s forwards ease-out;
+}
+
+.upslideout {
+    animation: Sliding-Upward-Out 0.15s forwards ease-in;
+}
+
+.downslidein {
+    transform: translateY(-200%);
+    animation: Sliding-Downward-In 0.6s forwards ease-out;
+}
+
+.downslideout {
+    animation: Sliding-Downward-Out 0.15s forwards ease-in;
 }
