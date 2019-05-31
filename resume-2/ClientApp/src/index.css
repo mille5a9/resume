@@ -33,7 +33,7 @@ body {
     height: 80px;
     width: 100px;
     border-radius: 10%;
-    margin-top: 50%;
+    margin-top: 25%;
 }
 
 .center {
@@ -93,18 +93,29 @@ body {
 }
 
 .intro {
-    margin-top: 15%;
+    padding-top: 3.7%;
+    margin-left: 1.6%;
+}
+
+.about {
     margin-left: 1.6%;
 }
 
 .paragraph {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .description {
     margin-left: 5%;
     margin-top: 2%;
     line-height: 28px;
+}
+
+.skill-letter {
+    width: 100%;
+    text-align: center;
+    font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+    font-size: 22px;
 }
 
 .menuliststart {
@@ -166,7 +177,20 @@ body {
     animation: Sliding-Downward-Out 0.15s forwards ease-in;
 }
 
+@keyframes P-Fade {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.p-fade {
+    animation: P-Fade 1s forwards linear;
+}
+
 @media (max-width: 767px) {
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-
 }

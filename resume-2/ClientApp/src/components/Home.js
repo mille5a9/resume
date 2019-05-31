@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Switch from "react-switch";
 
 export class Home extends Component {
     displayName = Home.name
@@ -6,6 +7,7 @@ export class Home extends Component {
         super(props);
         this.state = {
             scroll: 0,
+            checked: false,
             animation: "noanimation"
         };
         this.handleScroll = this.handleScroll.bind(this);
@@ -14,6 +16,7 @@ export class Home extends Component {
         this.handleClick2 = this.handleClick2.bind(this);
         this.handleClick3 = this.handleClick3.bind(this);
         this.handleClick4 = this.handleClick4.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
@@ -22,6 +25,10 @@ export class Home extends Component {
 
     componentWillUnmount() {
         window.removeEventListener('wheel', this.handleScroll);
+    }
+
+    handleToggle(e) {
+        this.setState({ isOn: !this.state.isOn });
     }
 
     handleScroll(event) {
@@ -70,6 +77,12 @@ export class Home extends Component {
             scroll: 4
         });
     }
+    handleChange(checked) {
+        this.setState({
+            checked
+        });
+        //setTimeout(this.setState({ fade: "nofade" }), 1000);
+    }
 
     render() {
         var maincontent = <div></div>;
@@ -90,11 +103,13 @@ export class Home extends Component {
                 //about me page
                 <div className={animation}>
                     <h1 className="intro">ABOUT</h1>
-                    <p className="paragraph">I am currently working on my B.S. in Computer Engineering at the University of Cincinnati. During the course of my studies I have held several internship positions so that I may gain professional experience early in my career.</p>
-                    <br />
-                    <p>My hopes are to continue to pursue a career in the heart of technological developments. I am very interested in building upon my skills as a developer and software engineer. I am also interested in the design of computer components on the architectural level.</p>
-                    <br />
-                    <p>More information about myself, my accomplishments, and my qualifications is available on the following pages, and you can reach me here:</p>
+                    <div className="paragraph about">
+                        <p>I am currently working on my B.S. in Computer Engineering at the University of Cincinnati. During the course of my studies I have held several internship positions so that I may gain professional experience early in my career.</p>
+                        <br />
+                        <p>My hopes are to continue to pursue a career in the heart of technological developments. I am very interested in building upon my skills as a developer and software engineer. I am also interested in the design of computer components on the architectural level.</p>
+                        <br />
+                        <p>More information about myself, my accomplishments, and my qualifications is available on the following pages, and you can reach me here:</p>
+                    </div>
                     <br />
                     <div className="col span_1_of_6"><br /><img className="headshot" src="./images/headshot.jpg" alt="(Headshot)" /></div>
                     <div className="col span_4_of_6">
@@ -166,11 +181,39 @@ export class Home extends Component {
 
                 </div>
                 break;
-            case 3: maincontent =
+            case 3:
+
+                var skillscontent = <div></div>;
+                switch (this.state.checked) {
+                    case false:
+                        skillscontent =
+                            <p className="paragraph">Here is the body text for the skills toggle</p>;
+                        break;
+                    case true:
+                        skillscontent =
+                            <p className="paragraph">Here is the body text for the awards toggle</p>;
+                }
+
+                maincontent =
                 //skills / awards / etc
                 <div className={animation}>
-                    <h1 className="intro">SKILLS + AWARDS</h1>
-                    <p className="paragraph">(Skills Text)</p>
+                    <div className="intro skill-letter">
+                        Skills&emsp;
+                        <Switch
+                            onChange={this.handleChange}
+                            checked={this.state.checked}
+                            uncheckedIcon={false}
+                            checkedIcon={false}
+                            height={25}
+                            width={50}
+                            offColor={'#C00018'}
+                            onColor={'#C00018'}
+                            activeBoxShadow={'0 0 2px 3px #000'}
+                        ></Switch>&emsp;Awards
+                    </div>
+                    <div className="col span_5_of_5">
+                        {skillscontent}
+                    </div>
                 </div>
                 break;
             case 4: maincontent =
