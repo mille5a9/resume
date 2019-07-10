@@ -102,6 +102,7 @@ export class Home extends Component {
             case 0: maincontent =
                 //about me page
                 <div className={animation}>
+                    
                     <h1 className="intro">ABOUT</h1>
                     <div className="paragraph about">
                         <p>I am currently working on my B.S. in Computer Engineering at the University of Cincinnati. During the course of my studies I have held several internship positions so that I may gain professional experience early in my career.</p>
@@ -187,11 +188,20 @@ export class Home extends Component {
                 switch (this.state.checked) {
                     case false:
                         skillscontent =
-                            <p className="paragraph">Here is the body text for the skills toggle</p>;
+                            (<ul className="skillward-list">Languages and Technologies:
+                                <li>C#, C++</li>
+                                <li>HTML, CSS, Python, Javascript (Knockout.js, Angular.js, React.js)</li>
+                                <li>GIT, UNIX shell, SQL</li>
+                            </ul>);
+
                         break;
                     case true:
                         skillscontent =
-                            <p className="paragraph">Here is the body text for the awards toggle</p>;
+                            (<ul className="skillward-list">Awards and Certifications:
+                                <li>Boy Scouts of America Eagle Scout Rank</li>
+                                <li>Cincinnatus Scholarship from the University of Cincinnati</li>
+                                <li>Completion of Microsoft Exam 483: Programming in C#</li>
+                            </ul>);
                 }
 
                 maincontent =
@@ -220,7 +230,25 @@ export class Home extends Component {
                 //project info
                 <div className={animation}>
                     <h1 className="intro">PROJECTS</h1>
-                    <p className="paragraph">(Projects Text)</p>
+                    <ul className="project-list about"><a className="projectlink" href="https://github.com/mille5a9/charmed" target="_blank">Personal Projects on Github</a>
+                        <li>Collection of Coding Projects</li>
+                        <li>Majority written in C#</li>
+                        <li>Helped to prepare for Microsoft C# Examination</li>
+                    </ul>
+                    <ul className="project-list about"><a className="projectlink" href="https://imgur.com/a/TgWri0K" target="_blank">Ether Mining Machine</a>
+                        <li>Built Linux Machine on specialized distribution "ethOS"</li>
+                        <li>Runs five Radeon RX 580 GPUs for "mining" on the Ethereum Blockchain</li>
+                        <li>Measured and cut wooden frame for DIY assembly</li>
+                    </ul>
+                    <ul className="project-list about"><a className="projectlink" href="https://docs.google.com/document/d/1bcv9Ou-DgXZBWiyrkb1ShN8PHP-Z5W9DSRH1IuGdafI/edit?usp=sharing" target="_blank">Non-Pipelined Control Unit</a>
+                        <li>Computer Organization Class Project done independently</li>
+                        <li>Tasked with creating a Non-Pipelined Control Unit for a CPU with a given 16-bit instruction set</li>
+                        <li>Required gate-level implementation of Control Unit and all other modules not directly related to main memory or the timeout mechanism</li>
+                    </ul>
+                    <ul className="project-list about"><a className="projectlink" href="https://seeandrewmiller.com" target="_blank">This Website</a>
+                        <li>Constructed with React.js and the Responsive Grid System (<a className="projectlink" href="http://www.responsivegridsystem.com/" target="_blank">http://www.responsivegridsystem.com/</a>)</li>
+                        <li>Hosted with IIS in an AWS Lightsail Instance</li>
+                    </ul>
                 </div>
                 break;
         }

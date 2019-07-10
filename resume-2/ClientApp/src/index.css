@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    min-height: 100%
+    min-height: 100%;
 }
 
 body {
@@ -105,6 +105,31 @@ body {
     margin-top: 5%;
 }
 
+.skillward-list {
+    margin-top: 5%;
+}
+
+.skillward-list > li {
+    margin: 5%;
+}
+
+.project-list {
+    margin-top: 5%;
+}
+
+.project-list > li {
+    margin-left: 5%;
+}
+
+.projectlink {
+    color: #C00018;
+    text-decoration: none;
+}
+
+.projectlink:active, .projectlink:visited, .projectlink:hover {
+    text-decoration: none;
+}
+
 .description {
     margin-left: 5%;
     margin-top: 2%;
@@ -193,4 +218,23 @@ body {
 
 @media (max-width: 767px) {
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    .fullheight {
+        display: none !important;
+    }
+    .paragraph {
+        margin-top: 5%;
+        margin-right: 2%;
+    }
+    .menuliststart {
+        text-align: center;
+        padding-right: 100px;
+    }
+    .menulist {
+        padding-left: 35%;
+        margin-top: 2%;
+        font-size: 24px;
+    }
+    .exp-img {
+        margin-top: 1%;
+    }
 }
