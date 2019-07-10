@@ -21,6 +21,7 @@ export class Home extends Component {
 
     componentDidMount() {
         window.addEventListener('wheel', this.handleScroll);
+        document.title = "Andrew Miller"
     }
 
     componentWillUnmount() {
@@ -114,7 +115,7 @@ export class Home extends Component {
                     <br />
                     <div className="col span_1_of_6"><br /><img className="headshot" src="./images/headshot.jpg" alt="(Headshot)" /></div>
                     <div className="col span_4_of_6">
-                        <p><br />Andrew Miller<br />614-827-5168<br />andrew.mille5a9@outlook.com<br /><i className="fab fa-linkedin"></i> <a className="linkedin" href="https://www.linkedin.com/in/andrew-miller-aa20a8148/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                    <p><br />Andrew Miller<br />614-827-5168<br />andrew.mille5a9@outlook.com<br /><i className="fab fa-linkedin"></i> <a className="linkedin" href="https://www.linkedin.com/in/andrew-miller-aa20a8148/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br /><a className="linkedin" href="/Andrew_Miller.pdf" target="_blank" rel="noopener noreferrer">PDF Resume</a></p>
                     </div>
                 </div>;
                 break;
