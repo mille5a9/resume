@@ -34,19 +34,19 @@ export class Home extends Component {
 
     handleScroll(event) {
         const delta = Math.sign(event.deltaY);
-        const inanimations = ["downslidein", "noanimation", "upslidein"];
-        const outanimations = ["downslideout", "noanimation", "upslideout"];
+        //const inanimations = ["downslidein", "noanimation", "upslidein"];
+        //const outanimations = ["downslideout", "noanimation", "upslideout"];
         var scrollvalue = this.state.scroll;
         scrollvalue += delta;
         if (scrollvalue === -1) scrollvalue = 4;
         else if (scrollvalue === 5) scrollvalue = 0;
-        this.setState({
-            animation: outanimations[delta + 1]
-        })
+        //this.setState({
+        //    animation: outanimations[delta + 1]
+        //})
         setTimeout(() => {
             this.setState({
                 scroll: scrollvalue,
-                animation: inanimations[delta + 1]
+                //animation: inanimations[delta + 1]
             });
         }, 200);
 
@@ -115,7 +115,7 @@ export class Home extends Component {
                     <br />
                     <div className="col span_1_of_6"><br /><img className="headshot" src="./images/headshot.jpg" alt="(Headshot)" /></div>
                     <div className="col span_4_of_6">
-                    <p><br />Andrew Miller<br />614-827-5168<br />andrew.mille5a9@outlook.com<br /><i className="fab fa-linkedin"></i> <a className="linkedin" href="https://www.linkedin.com/in/andrew-miller-aa20a8148/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br /><a className="linkedin" href="/Andrew_Miller.pdf" target="_blank" rel="noopener noreferrer">PDF Resume</a></p>
+                    <p><br />Andrew Miller<br />614-827-5168<br />andrewm192@outlook.com<br /><i className="fab fa-linkedin"></i> <a className="linkedin" href="https://www.linkedin.com/in/andrew-miller-aa20a8148/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br /><a className="linkedin" href="/Andrew_Miller.pdf" target="_blank" rel="noopener noreferrer">PDF Resume</a></p>
                     </div>
                 </div>;
                 break;
@@ -237,18 +237,19 @@ export class Home extends Component {
                         <li>Helped to prepare for Microsoft C# Examination</li>
                     </ul>
                     <ul className="project-list about"><a className="projectlink" href="https://imgur.com/a/TgWri0K" target="_blank">Ether Mining Machine</a>
-                        <li>Built Linux Machine on specialized distribution "ethOS"</li>
+                        <li>Built Linux machine running specialized distribution "ethOS"</li>
                         <li>Runs five Radeon RX 580 GPUs for "mining" on the Ethereum Blockchain</li>
                         <li>Measured and cut wooden frame for DIY assembly</li>
                     </ul>
                     <ul className="project-list about"><a className="projectlink" href="https://docs.google.com/document/d/1bcv9Ou-DgXZBWiyrkb1ShN8PHP-Z5W9DSRH1IuGdafI/edit?usp=sharing" target="_blank">Non-Pipelined Control Unit</a>
-                        <li>Computer Organization Class Project done independently</li>
+                        <li>Computer Organization class project done independently</li>
                         <li>Tasked with creating a Non-Pipelined Control Unit for a CPU with a given 16-bit instruction set</li>
                         <li>Required gate-level implementation of Control Unit and all other modules not directly related to main memory or the timeout mechanism</li>
                     </ul>
                     <ul className="project-list about"><a className="projectlink" href="https://seeandrewmiller.com" target="_blank">This Website</a>
                         <li>Constructed with React.js and the Responsive Grid System (<a className="projectlink" href="http://www.responsivegridsystem.com/" target="_blank">http://www.responsivegridsystem.com/</a>)</li>
-                        <li>Hosted with IIS in an AWS Lightsail Instance</li>
+                        <li>Previously hosted with IIS in an AWS Lightsail instance</li>
+                        <li>Now hosted at home on a Raspberry Pi and made available with Dynamic DNS</li>
                     </ul>
                 </div>
                 break;

@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
 
 namespace resume_2
 {
@@ -32,6 +34,23 @@ namespace resume_2
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.All
+            });
+
+            // Patch path base with forwarded path
+            app.Use(async (context, next) =>
+            {
+                var forwardedPath = context.Request.Headers["X-Forwarded-Path"].FirstOrDefault();
+                if (!string.IsNullOrEmpty(forwardedPath))
+                {
+                    context.Request.PathBase = forwardedPath;
+                }
+
+                await next();
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
