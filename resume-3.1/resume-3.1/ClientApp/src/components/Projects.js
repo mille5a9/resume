@@ -26,19 +26,89 @@ export class Projects extends Component {
             },
             {
                 key: 'first-level-node-2',
-                label: 'Node 2 at the first level',
+                label: 'Ether Mining Machine',
                 nodes: [
                     {
                         key: 'second-level-node-1',
-                        label: 'Collection of Coding Projects'
+                        label: 'Built Linux Machine on specialized distribution "ethOS"'
                     },
                     {
                         key: 'second-level-node-2',
-                        label: 'Majority written in C#'
+                        label: 'Runs five Radeon RX 580 GPUs for "mining" on the Ethereum Blockchain'
                     },
                     {
                         key: 'second-level-node-3',
-                        label: 'Helped to prepare for Microsoft C# Examination'
+                        label: 'Measured and cut wooden frame for DIY assembly'
+                    },
+                ],
+            },
+            {
+                key: 'first-level-node-3',
+                label: 'Non-Pipelined Control Unit',
+                nodes: [
+                    {
+                        key: 'second-level-node-1',
+                        label: 'Computer Organization Class Project done independently'
+                    },
+                    {
+                        key: 'second-level-node-2',
+                        label: 'Tasked with creating a Non-Pipelined Control Unit for a CPU with a given 16-bit instruction set'
+                    },
+                    {
+                        key: 'second-level-node-3',
+                        label: 'Required gate-level implementation of Control Unit and all other modules not directly related to main memory or the timeout mechanism'
+                    },
+                ],
+            },
+            {
+                key: 'first-level-node-4',
+                label: 'Personal Website',
+                nodes: [
+                    {
+                        key: 'second-level-node-0',
+                        label: 'Constructed with React.js and Bootstrap'
+                    },
+                    {
+                        key: 'second-level-node-1',
+                        label: 'Hosted on a Raspberry Pi 3b'
+                    },
+                    {
+                        key: 'second-level-node-2',
+                        label: 'Exposed to public with DDNS'
+                    },
+                ],
+            },
+            {
+                key: 'first-level-node-5',
+                label: 'Homelab',
+                nodes: [
+                    {
+                        key: 'second-level-node-0',
+                        label: '12U Server Rack'
+                    },
+                    {
+                        key: 'second-level-node-1',
+                        label: 'Dell R210ii running PfSense'
+                    },
+                    {
+                        key: 'second-level-node-2',
+                        label: 'Custom built NAS server'
+                    },
+                    {
+                        key: 'second-level-node-3',
+                        label: 'HP2620-24 PoE Networking Switch'
+                    },
+                    {
+                        key: 'second-level-node-4',
+                        label: 'APC Smart-UPS 480W'
+                    },
+                    {
+                        key: 'second-level-node-5',
+                        label: 'Unifi AP-AC Lite Access Point'
+                    },
+                    {
+                        key: 'second-level-node-6',
+                        label: 'Raspberry Pi 3b'
                     },
                 ],
             },

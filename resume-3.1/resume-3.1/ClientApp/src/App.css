@@ -23,6 +23,11 @@
 
 .leftFrameDetached {
     padding-left: 15%;
+    padding-right: 6%;
+}
+
+.leftFrameDetached > div:focus {
+    outline: none;
 }
 
 .container {
@@ -41,6 +46,10 @@
     width: 80%;
     text-align: left;
 }
+
+.menuButton:hover, .menuButton:focus {
+    background-color: #C00018;
+} 
 
 .rstm-tree-item {
     padding-bottom: 4px;
