@@ -3,3 +3,58 @@ html {
     height: 100%;
     width: 100%;
 }
+
+.Collapsible {
+    background-color: #2c2c30;
+    border: 2px inset;
+    border-color: #C00018;
+    border-radius: 8px;
+    /* box-shadow: 2px 2px #2c2c30; */
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+.Collapsible > span > ul:hover {
+    cursor: pointer;
+}
+
+.Collapsible > span > ul {
+    background-color: #393943;
+    padding: 8px;
+    list-style-position: inside;
+}
+
+/* .Collapsible > span > ul > p {
+    text-decoration-color: #C00018;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    color: inherit;
+} */
+
+.Collapsible > span > ul > li > span {
+    text-decoration-line: none !important;
+    text-decoration-style: none;
+    padding-left: 12px;
+    padding-top: 2px;
+}
+
+.Collapsible > span > ul > p {
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+p > a, p > a:focus, p > a:hover, p > a:visited, p > a:active {
+    text-decoration-color: #C00018;
+    color: #C00018;
+}
+
+span > ul > a, span > ul > a:focus, span > ul > a:hover, span > ul > a:visited, span > ul > a:active {
+    text-decoration-color: #C00018;
+    text-decoration-line: underline;
+    color: white;
+}
+
+h1 > span > a, h1 > span > a:focus, h1 > span > a:hover, h1 > span > a:visited, h1 > span > a:active {
+    text-decoration-line: none;
+    color: #C00018;
+}
