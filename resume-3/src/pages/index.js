@@ -166,7 +166,7 @@ const projectLinks = [
       "This website came into being in Spring of 2019, with a jet black backround and all the resume information copied verbatim onto several obtusely-named pages. That first "
       + "implementation was from my first days with React, where I technically made the site with create-react-app, but I didn't use the power of the tool to create a cooler site. "
       + "The AWS EC2 instance was running slow, so I rewrote it the following Summer term without bootstrap and with some design pointers from a professional. The second one was "
-      + "still slow, but this third incarnation ditches the bulky structure associated with a .NET React app and instead is a simple single-page Node JS site. I have found the "
+      + "still slow, but this third incarnation ditches the bulky structure associated with a .NET React app in favor of a simple single-page Node JS site. I have found the "
       + "process of iteration to be a fun learning experience, and I know that this is typical of many projects in any engineering space. Having a URL that I can say is mine that "
       + "advocates for me is an empowering feeling and I believe the time investment has already paid off.",
   },
@@ -175,11 +175,16 @@ const projectLinks = [
     date: "January 2020",
     headings: [
       "Stores security camera footage on NAS with a systemd service",
-      "Runs a game server for myself and my friends",
       "Facilitates my remote development via VSCode's SSH capabilities",
+      "Runs a game server for myself and my friends",
     ],
     description:
-      "",
+      "The server was born out of a desire for me to have an always-on machine for future home automation business. I was infatuated with the idea of building up infrastructure "
+      + "and knowledge to be able to turn a future home into the smartest home I could. Merely installing PfSense onto a 1U server has given me more insight into enterprise "
+      + "networking than anything I have ever done before, and having a powerful Ubuntu machine on standby has done wonders for my proficiency with Linux SSH environments. "
+      + "I have gotten great use in my final school terms with writing programs for classes using the server, VS Code's Remote SSH extension providing a wonderful access point. "
+      + "Adding drives in a Raid 5 array provided an exciting amount of storage for camera footage and logs, and I cannot wait to expand the system to fit into future homes "
+      + "for the rest of my life.",
   },
   {
     text: "Github Repository",
@@ -191,7 +196,10 @@ const projectLinks = [
     ],
     link: "https://github.com/mille5a9/charmed",
     description:
-      "",
+      "This collection of personal projects was inspired by my pursuits in learning about C#. I started with duplicating the common data structures that I wrote in C++ for a "
+      + "previous college course, and it developed into seeing what sorts of things I could accomplish. I was able to create a chat bot for my friends to interact with, and "
+      + "it was able to scrape the first page of google search results for a given query. This was an exciting development for me; I became more comfortable with seeking out "
+      + "packages, extensions, and plugins to support my edeavors from here on out.",
   },
   {
     text: "Ethereum Miner",
@@ -202,10 +210,44 @@ const projectLinks = [
       "Runs on a specialized linux distribution",
     ],
     description:
-      "",
+      "From an investment point-of-view, this project was an incredible leap of faith for me. I was still at the beginning of my college education and I was enthused by "
+      + "all of the exciting new technologies in the blockchain space. I wanted to start investing for personal reasons, but I also wanted to learn about and participate in the "
+      + "ecosystem as a computer engineer and as a lover of technology. This machine has followed me to numerous different apartments, heated my home throughout several "
+      + "winters, and kept me up for a couple sleepless nights. This is and has been a fun adventure in consumer PC equipment, and I feel that my involvement with these "
+      + "sorts of inventions is far from over.",
   },
 ]
-
+const awardsLinks = [
+  {
+    text: "Cincinnatus Scholarship",
+    date: "August 2016 - May 2021",
+    headings: [
+      "Maintained a GPA over 3.2 on a per-semester basis",
+      "Annual community service",
+    ],
+    description:
+      "This scholarship program required maintaining a certain GPA and completing community service on a yearly basis. For my contribution to my community, I got in touch "
+      + "with one of my language arts teachers from middle school. I was able to come in to her classroom each day on all of my Spring breaks throughout college. I would "
+      + "help with grading papers, and I would help students who were particularly struggling with completing their assignments on time so that they did not fall behind. "
+      + "Teaching has always been a curiousity of mine, and being in the environment on the opposite side of what I am used to was interesting. I also found it very "
+      + "satisfying to lend a hand to some of society's most underappreciated occupations. I know that the students in her study hall greatly appreciated having an adult "
+      + "in the room that could help them with algebra.",
+  },
+  {
+    text: "Boy Scouts of America - Eagle Scout Rank",
+    date: "October 2015",
+    headings: [
+      "Demonstrated personal responsibility serving multiple terms in patrol and troop-level leadership positions",
+    ],
+    description:
+      "I come from a family of Boy Scouts, my much-older brother and my Dad and my Grandfather before him were all Eagle Scouts from Troop 136 in Grove City. Naturally, "
+      + "progressing to Eagle Scout was an expectation for me. There was a great deal of pressure on us scouts in the troop to progress through our ranks as quickly as possible, "
+      + "as our scoutmaster saw that the step to high school causes most scouts to lose interest. I was able to do much of the work for my Eagle project just before Freshman year. "
+      + "My project was fortunately funded by a local church, where I organized the purchase and delivery of a multitude of plants and a few dozen cubic meters of soil. I had about "
+      + "70 individuals help me over three days of work, where we installed the garden and added mulch. I then set up a sprinkler system to grow new grass which required a visit twice a "
+      + "day for the Summer of 2015.",
+  },
+]
 
 // markup
 const IndexPage = () => {
@@ -274,6 +316,26 @@ const IndexPage = () => {
         ))}
         <p style={categoryStyles}>Personal Projects</p>
         {projectLinks.map(link => (
+          <ul style={{ ...listItemStyles }}>
+            <Collapsible style={link.Style} trigger={
+              <ul style={descriptionStyle}>
+                <div style={jobHeading}>
+                  <div style={jobInfo}>
+                    <span style={jobInfoLeft}>{link.text}</span>
+                    <span style={jobInfoRight}>{link.date}</span>
+                  </div>
+                  <br />
+                </div>
+                {link.headings.map(heading => (<li><span>{heading}</span></li>))}
+                <a href={link.link} target="_blank" rel="noopener noreferrer" >{link.link}</a>
+              </ul>
+              }>
+              <p style={descriptionStyle}>{link.description}</p>
+            </Collapsible>
+          </ul>
+        ))}
+        <p style={categoryStyles}>Awards</p>
+        {awardsLinks.map(link => (
           <ul style={{ ...listItemStyles }}>
             <Collapsible style={link.Style} trigger={
               <ul style={descriptionStyle}>
