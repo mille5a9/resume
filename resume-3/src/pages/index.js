@@ -81,6 +81,22 @@ const jobHeading = {
 // data
 const experienceLinks = [
   {
+    text: "Software Developer I",
+    subtext: "Battelle Memorial Institute",
+    date: "May 2021 - Present",
+    location: "Columbus, Ohio",
+    headings: [
+      "Executed full-stack implementation of search functionality for client’s public Data Explorer tool",
+      "Interacted with clients at the Centers for Disease Control to advance business objectives",
+      "Provided regular summaries and updates of progress to leadership team",
+    ],
+    description:
+      "My first job post-graduation, Battelle was a slight change for me in the tech stack. My co-op experiences were mostly with a .NET stack, while my team at Battelle makes "
+      + "use of Java + Angular in addition to SQL for their applications. This is my first fully-remote job, while it might not have been that way in a disease-free world. "
+      + "Battelle leverages my fullstack skillset as I do frontend, backend, and database development for the team's principle client, the Centers for Disease Control. "
+      + "Our main project has me working with my first public-facing applications, which I find exciting. I can actually tell my friends to try the \"Search\" button at ephtracking.cdc.gov/DataExplorer."
+  },
+  {
     text: "Software Developer Co-op",
     subtext: "Myriad Neuroscience",
     date: "January 2020 - August 2020",
@@ -201,21 +217,6 @@ const projectLinks = [
       + "it was able to scrape the first page of google search results for a given query. This was an exciting development for me; I became more comfortable with seeking out "
       + "packages, extensions, and plugins to support my edeavors from here on out.",
   },
-  {
-    text: "Ethereum Miner",
-    date: "December 2017",
-    headings: [
-      "Assembled parts and constructed wooden frame",
-      "Utilizes five GPUs to mine on the Ethereum blockchain, providing security to the network",
-      "Runs on a specialized linux distribution",
-    ],
-    description:
-      "From an investment point-of-view, this project was an incredible leap of faith for me. I was still at the beginning of my college education and I was enthused by "
-      + "all of the exciting new technologies in the blockchain space. I wanted to start investing for personal reasons, but I also wanted to learn about and participate in the "
-      + "ecosystem as a computer engineer and as a lover of technology. This machine has followed me to numerous different apartments, heated my home throughout several "
-      + "winters, and kept me up for a couple sleepless nights. This is and has been a fun adventure in consumer PC equipment, and I feel that my involvement with these "
-      + "sorts of inventions is far from over.",
-  },
 ]
 const awardsLinks = [
   {
@@ -261,12 +262,13 @@ const IndexPage = () => {
       </h1>
       <p style={paragraphStyles}>
         Hi, I'm Andy, and I am an aspiring software developer with a B.S. in Computer Engineering from the University of Cincinnati. 
-        My education included about two years of proper experience as a software developer. 
+        My education included about two years of proper experience as a software developer. I have also now launched my career with my first post-graduate experience at Battelle.
         These experiences have reaffirmed my passion for software development and my desire to continue writing programs that will have a positive effect on peoples lives.
       </p>
       {/* <p style={paragraphStyles}><a href={ pdfResume } target="_blank" rel="noopener noreferrer">Here is my resume</a> as a PDF</p> */}
       <ul style={listStyles}>
         <p style={categoryStyles}>Professional Experience</p>
+        <p>(Click them to expand)</p>
         {experienceLinks.map(link => (
           <ul style={{ ...listItemStyles }}>
             <Collapsible style={link.Style} trigger={
